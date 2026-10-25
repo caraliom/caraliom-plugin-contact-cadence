@@ -110,8 +110,8 @@ importers:
   .:
     devDependencies:
       '@caraliom/plugin-sdk':
-        specifier: 0.0.1
-        version: 0.0.1(@testing-library/react@16.3.3(@testing-library/dom@10.4.1)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@types/react@19.3.0)(react@19.3.0)(typescript@7.0.2)
+        specifier: 0.0.2
+        version: 0.0.2(@testing-library/react@16.3.3(@testing-library/dom@10.4.1)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@types/react@19.3.0)(react@19.3.0)(typescript@7.0.2)
       '@testing-library/dom':
         specifier: 10.4.1
         version: 10.4.1
@@ -176,8 +176,8 @@ packages:
     resolution: {integrity: sha512-ctxtJ/eA+t+6q2++vj5j7FYX3nRu311q1wfYH3xjlLOsczhlhxAg2FWNUXhpGvAw3BWo1xBcvOV6/YLc2r5FJw==}
     hasBin: true
 
-  '@caraliom/plugin-sdk@0.0.1':
-    resolution: {integrity: sha512-qQUsPQGjG8N8fiR4ljpriwSpX7dlyBO5C//Y4bEj/3O2+gwB2CalxqYUqnUHomPUvDEDCDetdZS2CZuUvb9Pzg==}
+  '@caraliom/plugin-sdk@0.0.2':
+    resolution: {integrity: sha512-lFlAaJBUTJy3bncoG6f8/0tU85b4yr0ucnaNbW8M3JtX9Y0hHcOZyLuWZmYS9h4aOgyzoi4x0kExcAvtaSkbmA==}
     hasBin: true
     peerDependencies:
       '@testing-library/react': latest
@@ -1096,24 +1096,28 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.32.0:
     resolution: {integrity: sha512-UpQkoenr4UJEzgVIYpI80lDFvRmPVg6oqboNHfoH4CQIfNA+HOrZ7Mo7KZP02dC6LjghPQJeBsvXhJod/wnIBg==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.32.0:
     resolution: {integrity: sha512-V7Qr52IhZmdKPVr+Vtw8o+WLsQJYCTd8loIfpDaMRWGUZfBOYEJeyJIkqGIDMZPwPx24pUMfwSxxI8phr/MbOA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.32.0:
     resolution: {integrity: sha512-bYcLp+Vb0awsiXg/80uCRezCYHNg1/l3mt0gzHnWV9XP1W5sKa5/TCdGWaR/zBM2PeF/HbsQv/j2URNOiVuxWg==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.32.0:
     resolution: {integrity: sha512-8SbC8BR40pS6baCM8sbtYDSwEVQd4JlFTOlaD3gWGHfThTcABnNDBda6eTZeqbofalIJhFx0qKzgHJmcPTnGdw==}
@@ -1468,7 +1472,7 @@ snapshots:
     dependencies:
       css-tree: 3.2.1
 
-  '@caraliom/plugin-sdk@0.0.1(@testing-library/react@16.3.3(@testing-library/dom@10.4.1)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@types/react@19.3.0)(react@19.3.0)(typescript@7.0.2)':
+  '@caraliom/plugin-sdk@0.0.2(@testing-library/react@16.3.3(@testing-library/dom@10.4.1)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@types/react@19.3.0)(react@19.3.0)(typescript@7.0.2)':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
       ajv: 8.20.0
