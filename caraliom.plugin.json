@@ -1,7 +1,7 @@
 {
   "id": "app.caraliom.contact-cadence",
   "name": "Contact Cadence Tracker",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "kind": "community",
   "backend": {
     "entry": "backend.ts"
