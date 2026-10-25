@@ -1,0 +1,123 @@
+{
+  "id": "app.caraliom.contact-cadence",
+  "name": "Contact Cadence Tracker",
+  "version": "1.0.0",
+  "kind": "community",
+  "backend": {
+    "entry": "backend.ts"
+  },
+  "capabilities": {
+    "services": [
+      "contacts",
+      "navigation"
+    ]
+  },
+  "storage": {
+    "records": {
+      "interactions": {
+        "version": 1,
+        "maxBytes": 1048576,
+        "editors": [
+          "plugin",
+          "external"
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "interactions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "date",
+                  "type",
+                  "notes"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "interactions"
+          ],
+          "additionalProperties": false
+        },
+        "keyKind": "contact",
+        "maxRecords": 100000,
+        "maxCollectionBytes": 268435456
+      }
+    },
+    "contactExtension": {
+      "version": 1,
+      "maxBytes": 4096,
+      "editors": [
+        "plugin",
+        "external"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cadence": {
+            "enum": [
+              "weekly",
+              "monthly",
+              "quarterly",
+              "bi-yearly",
+              "yearly"
+            ]
+          },
+          "lastContacted": {
+            "type": "string"
+          },
+          "overdueOverride": {
+            "type": "boolean"
+          },
+          "ignoreCadence": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "contributions": {
+    "views": {
+      "cadence-overview": {
+        "label": "Contact Cadence Tracker",
+        "entry": "view.js",
+        "export": "ContactCadenceView"
+      }
+    },
+    "ribbon": {
+      "contact-cadence-open": {
+        "label": "Cadence",
+        "navigation": {
+          "view": "cadence-overview"
+        }
+      }
+    },
+    "contactTabs": {
+      "contact-cadence": {
+        "label": "Cadence",
+        "entry": "views/contact-cadence.js",
+        "export": "ContactCadenceTab"
+      }
+    }
+  },
+  "description": "Track meeting cadence and log interactions with your contacts."
+}
